@@ -2,8 +2,6 @@ const http = require('node:http');
 
 const server = http.createServer((req, res) => {
   console.log(req.url, req.method);
-  // res.setHeader('Content-Type', 'application/json');
-  // res.end(JSON.stringify({ greeting: 'hello http' }));
 
   const paths = req.url.split('/');
   const path = paths[paths.length - 1];
@@ -35,12 +33,12 @@ const routes = {
       res.end('users POST');
     },
   },
-  pets: {
+  fruits: {
     GET(req, res) {
-      res.end('pets GET');
+      res.end('fruits GET');
     },
     POST(req, res) {
-      res.end('pets POST');
+      res.end('fruits POST');
     },
   },
 };
