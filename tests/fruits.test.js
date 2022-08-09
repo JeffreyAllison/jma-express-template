@@ -3,7 +3,7 @@ const { setupDb, signUpUser } = require('./utils.js');
 describe('/api/v1/fruits', () => {
   beforeEach(setupDb);
 
-  it.skip('GET / returns all fruits associated with the authenticated User', async () => {
+  it('GET / returns all fruits associated with the authenticated User', async () => {
     const { agent } = await signUpUser();
     const { body: user1Fruit } = await agent.post('/api/v1/fruits').send({
       name: 'banana',
