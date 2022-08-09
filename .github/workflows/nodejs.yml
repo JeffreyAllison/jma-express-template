@@ -18,7 +18,7 @@ jobs:
       - run: npm run test
         env:
           CI: true
-          PGDATABASE: alchemy
-          JWT_SECRET: ${{ secrets.JWT_SECRET }}
-          SALT_ROUNDS: ${{ secrets.SALT_ROUNDS }}
-          COOKIE_NAME: ${{ secrets.COOKIE_NAME }}
+          DATABASE_URL: postgres://alchemy:alchemy@postgres:5432/alchemy
+          JWT_SECRET: sekrit
+          SALT_ROUNDS: 8
+          COOKIE_NAME: session
