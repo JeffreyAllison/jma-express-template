@@ -13,6 +13,5 @@ CREATE TABLE fruits (
   name VARCHAR NOT NULL,
   edible_rind BOOLEAN NOT NULL DEFAULT(false),
   color VARCHAR NOT NULL,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   FOREIGN KEY (user_id) REFERENCES users(id)
 )
