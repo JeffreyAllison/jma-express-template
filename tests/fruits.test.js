@@ -81,7 +81,7 @@ describe('/api/v1/fruits', () => {
     });
   });
 
-  it('DELETE /:id should delete fruits for valid user', async () => {
+  it.skip('DELETE /:id should delete fruits for valid user', async () => {
     const { agent } = await signUpUser();
 
     const { body: fruit } = await agent.post('/api/v1/fruits').send({
