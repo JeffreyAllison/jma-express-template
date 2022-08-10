@@ -9,7 +9,7 @@ CREATE TABLE users (
 
 CREATE TABLE fruits (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-  user_id BIGINT ,
+  user_id BIGINT,
   name VARCHAR NOT NULL,
   edible_rind BOOLEAN NOT NULL DEFAULT(false),
   color VARCHAR NOT NULL,
