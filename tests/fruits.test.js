@@ -81,11 +81,11 @@ describe('/api/v1/fruits', () => {
     });
   });
 
-  it.skip('DELETE /:id should delete fruits for valid user', async () => {
+  it('DELETE /:id should delete fruits for valid user', async () => {
     const { agent } = await signUpUser();
 
     const { body: fruit } = await agent.post('/api/v1/fruits').send({
-      description: 'apple',
+      name: 'apple',
       color: 'red',
     });
 
@@ -98,11 +98,11 @@ describe('/api/v1/fruits', () => {
     expect(fruits.length).toBe(0);
   });
 
-  it.skip('UPDATE /:id should 403 for invalid users', async () => {
+  it('UPDATE /:id should 403 for invalid users', async () => {
     const { agent } = await signUpUser();
 
     const { body: fruit } = await agent.post('/api/v1/fruits').send({
-      fruit: 'apple',
+      name: 'apple',
       color: 'red',
     });
 
